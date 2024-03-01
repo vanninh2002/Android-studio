@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
     tools:context=".MainActivity">
 
     <ProgressBar
+        android:id="@+id/idPBLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/idPBLoading"
         android:layout_centerInParent="true"
-        android:visibility="gone"
+        android:visibility="visible"
 
         />
     <RelativeLayout
+        android:id="@+id/idRLHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/idRLHome"
         android:visibility="gone"
         >
         <ImageView
@@ -78,7 +79,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:id="@+id/idTVSearch"
+                android:id="@+id/idIVSearch"
                 android:layout_margin="10dp"
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
@@ -125,7 +126,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@id/idRvWeather"
+            android:layout_above="@id/idRVWeather"
             android:layout_margin="8dp"
             android:layout_marginBottom="10dp"
             android:text="Today's weather Forecast"
@@ -134,9 +135,9 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRVWeather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/idRvWeather"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
